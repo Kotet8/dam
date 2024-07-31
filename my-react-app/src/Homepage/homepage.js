@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; 
 import styles from './homepage.module.css';
 import logo from './penguin.png';
-import UploadModal from './uploadModal'; // Import the UploadModal component
+import UploadModal from './UploadModal/uploadModal'; // Import the UploadModal component
 
 function HomePage() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -72,6 +73,13 @@ function HomePage() {
         </div>
         <button className={styles.uploadButton} onClick={handleUploadButton}> + Upload</button>
         {/* Content goes here */}
+      </div>
+
+ {/* Image box with link to photo details */}
+      <div className={styles.imageBox}>
+        <Link to="/photodetails">
+          <img src="/cat.jpg" alt="Sample" />
+        </Link>
       </div>
 
       {/* Upload Modal */}
