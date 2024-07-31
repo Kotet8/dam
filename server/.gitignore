@@ -1,0 +1,5 @@
+.DS_Store
+/node_modules
+/package-lock.json
+.env
+citric-optics-426821-b1-daff321f81eb.json
